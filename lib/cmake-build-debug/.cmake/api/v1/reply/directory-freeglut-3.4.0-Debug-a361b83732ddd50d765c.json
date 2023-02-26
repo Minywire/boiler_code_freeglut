@@ -1,0 +1,162 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL"
+		],
+		"files" : 
+		[
+			"freeglut-3.4.0/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 514,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 536,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 543,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 640,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 661,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 666,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"freeglut-3.4.0/lib/libglut.3.12.0.dylib",
+				"freeglut-3.4.0/lib/libglut.3.dylib"
+			],
+			"targetId" : "freeglut::@7a55c9b8206558df01fe",
+			"targetIndex" : 12,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"freeglut-3.4.0/lib/libglut.dylib"
+			],
+			"targetId" : "freeglut::@7a55c9b8206558df01fe",
+			"targetIndex" : 12,
+			"targetInstallNamelink" : "only",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"freeglut-3.4.0/lib/libglut.a"
+			],
+			"targetId" : "freeglut_static::@7a55c9b8206558df01fe",
+			"targetIndex" : 13,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Devel",
+			"destination" : "include/GL",
+			"paths" : 
+			[
+				"freeglut-3.4.0/include/GL/freeglut.h",
+				"freeglut-3.4.0/include/GL/freeglut_ucall.h",
+				"freeglut-3.4.0/include/GL/freeglut_ext.h",
+				"freeglut-3.4.0/include/GL/freeglut_std.h",
+				"freeglut-3.4.0/include/GL/glut.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Devel",
+			"destination" : "lib/pkgconfig",
+			"paths" : 
+			[
+				{
+					"from" : "cmake-build-debug/freeglut.pc",
+					"to" : "glut.pc"
+				}
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/FreeGLUT",
+			"exportName" : "FreeGLUTTargets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "freeglut::@7a55c9b8206558df01fe",
+					"index" : 12
+				},
+				{
+					"id" : "freeglut_static::@7a55c9b8206558df01fe",
+					"index" : 13
+				}
+			],
+			"paths" : 
+			[
+				"freeglut-3.4.0/CMakeFiles/Export/6f3d6babffe806515ac5156322d25f7d/FreeGLUTTargets.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "Devel",
+			"destination" : "lib/cmake/FreeGLUT",
+			"paths" : 
+			[
+				"cmake-build-debug/freeglut-3.4.0/FreeGLUT/FreeGLUTConfig.cmake",
+				"cmake-build-debug/freeglut-3.4.0/FreeGLUT/FreeGLUTConfigVersion.cmake"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "freeglut-3.4.0",
+		"source" : "freeglut-3.4.0"
+	}
+}

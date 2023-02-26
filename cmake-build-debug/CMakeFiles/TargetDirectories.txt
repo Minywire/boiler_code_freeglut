@@ -1,0 +1,14 @@
+/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/CMakeFiles/boiler_code_freeglut.dir
+/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/CMakeFiles/list_install_components.dir
+/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/CMakeFiles/install.dir
+/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/CMakeFiles/install/local.dir
+/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/CMakeFiles/install/strip.dir
+/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/lib/freeglut/CMakeFiles/freeglut_static.dir
+/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/lib/freeglut/CMakeFiles/edit_cache.dir
+/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/lib/freeglut/CMakeFiles/rebuild_cache.dir
+/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/lib/freeglut/CMakeFiles/list_install_components.dir
+/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/lib/freeglut/CMakeFiles/install.dir
+/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/lib/freeglut/CMakeFiles/install/local.dir
+/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/lib/freeglut/CMakeFiles/install/strip.dir

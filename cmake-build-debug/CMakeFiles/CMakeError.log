@@ -1,0 +1,81 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+ld: library not found for -lSystem
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Determining if the function IceConnectionNumber exists in the ICE failed with the following output:
+Change Dir: /Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/Applications/CLion.app/Contents/bin/ninja/mac/ninja cmTC_023f9 && [1/2] Building C object CMakeFiles/cmTC_023f9.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_023f9
+FAILED: cmTC_023f9 
+: && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -DCHECK_FUNCTION_EXISTS=IceConnectionNumber -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/cmTC_023f9.dir/CheckFunctionExists.c.o -o cmTC_023f9 -L/opt/homebrew/lib -Wl,-rpath,/opt/homebrew/lib  -lICE && :
+ld: library not found for -lICE
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if files /opt/homebrew/include/X11/extensions/XInput2.h exist failed with the following output:
+Change Dir: /Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/Applications/CLion.app/Contents/bin/ninja/mac/ninja cmTC_7c756 && [1/2] Building C object CMakeFiles/cmTC_7c756.dir/HAVE_X11_EXTENSIONS_XINPUT2_H.c.o
+FAILED: CMakeFiles/cmTC_7c756.dir/HAVE_X11_EXTENSIONS_XINPUT2_H.c.o 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_7c756.dir/HAVE_X11_EXTENSIONS_XINPUT2_H.c.o -MF CMakeFiles/cmTC_7c756.dir/HAVE_X11_EXTENSIONS_XINPUT2_H.c.o.d -o CMakeFiles/cmTC_7c756.dir/HAVE_X11_EXTENSIONS_XINPUT2_H.c.o -c /Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/CMakeFiles/CheckIncludeFiles/HAVE_X11_EXTENSIONS_XINPUT2_H.c
+In file included from /Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/CMakeFiles/CheckIncludeFiles/HAVE_X11_EXTENSIONS_XINPUT2_H.c:2:
+/opt/homebrew/include/X11/extensions/XInput2.h:30:10: fatal error: 'X11/Xlib.h' file not found
+#include <X11/Xlib.h>
+         ^~~~~~~~~~~~
+1 error generated.
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include </opt/homebrew/include/X11/extensions/XInput2.h>
+
+
+int main(void){return 0;}
+
+Determining if files usbhid.h exist failed with the following output:
+Change Dir: /Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/Applications/CLion.app/Contents/bin/ninja/mac/ninja cmTC_96056 && [1/2] Building C object CMakeFiles/cmTC_96056.dir/HAVE_USBHID_H.c.o
+FAILED: CMakeFiles/cmTC_96056.dir/HAVE_USBHID_H.c.o 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_96056.dir/HAVE_USBHID_H.c.o -MF CMakeFiles/cmTC_96056.dir/HAVE_USBHID_H.c.o.d -o CMakeFiles/cmTC_96056.dir/HAVE_USBHID_H.c.o -c /Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/CMakeFiles/CheckIncludeFiles/HAVE_USBHID_H.c
+/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/CMakeFiles/CheckIncludeFiles/HAVE_USBHID_H.c:2:10: fatal error: 'usbhid.h' file not found
+#include <usbhid.h>
+         ^~~~~~~~~~
+1 error generated.
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <usbhid.h>
+
+
+int main(void){return 0;}
+
+Determining if the function XParseGeometry exists failed with the following output:
+Change Dir: /Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/Applications/CLion.app/Contents/bin/ninja/mac/ninja cmTC_1e241 && [1/2] Building C object CMakeFiles/cmTC_1e241.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_1e241
+FAILED: cmTC_1e241 
+: && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -DCHECK_FUNCTION_EXISTS=XParseGeometry -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/cmTC_1e241.dir/CheckFunctionExists.c.o -o cmTC_1e241  -lm && :
+Undefined symbols for architecture arm64:
+  "_XParseGeometry", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+ninja: build stopped: subcommand failed.
+
+
+

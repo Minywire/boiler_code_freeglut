@@ -1,0 +1,732 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: boiler_code_freeglut
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/
+# =============================================================================
+# Object build statements for EXECUTABLE target boiler_code_freeglut
+
+
+#############################################
+# Order-only phony target for boiler_code_freeglut
+
+build cmake_object_order_depends_target_boiler_code_freeglut: phony || cmake_object_order_depends_target_freeglut_static
+
+build CMakeFiles/boiler_code_freeglut.dir/src/main.c.o: C_COMPILER__boiler_code_freeglut_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/src/main.c || cmake_object_order_depends_target_boiler_code_freeglut
+  DEFINES = -DBUILD_LIB_FREEGLUT
+  DEP_FILE = CMakeFiles/boiler_code_freeglut.dir/src/main.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wall -Wextra -pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include
+  OBJECT_DIR = CMakeFiles/boiler_code_freeglut.dir
+  OBJECT_FILE_DIR = CMakeFiles/boiler_code_freeglut.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/boiler_code_freeglut.dir/
+  TARGET_PDB = boiler_code_freeglut.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target boiler_code_freeglut
+
+
+#############################################
+# Link the executable boiler_code_freeglut.app/Contents/MacOS/boiler_code_freeglut
+
+build boiler_code_freeglut.app/Contents/MacOS/boiler_code_freeglut: C_EXECUTABLE_LINKER__boiler_code_freeglut_Debug CMakeFiles/boiler_code_freeglut.dir/src/main.c.o | lib/freeglut/lib/libglut.a /opt/homebrew/lib/libGL.dylib /usr/X11R6/lib/libGLU.dylib /opt/homebrew/lib/libX11.dylib /opt/homebrew/lib/libXrandr.dylib /opt/homebrew/lib/libXxf86vm.dylib /opt/homebrew/lib/libXi.dylib /opt/homebrew/lib/libGL.dylib || lib/freeglut/lib/libglut.a
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk
+  LINK_LIBRARIES = lib/freeglut/lib/libglut.a  /opt/homebrew/lib/libGL.dylib  /usr/X11R6/lib/libGLU.dylib  /opt/homebrew/lib/libX11.dylib  /opt/homebrew/lib/libXrandr.dylib  /opt/homebrew/lib/libXxf86vm.dylib  /opt/homebrew/lib/libXi.dylib  /opt/homebrew/lib/libGL.dylib  -lm
+  OBJECT_DIR = CMakeFiles/boiler_code_freeglut.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/boiler_code_freeglut.dir/
+  TARGET_FILE = boiler_code_freeglut.app/Contents/MacOS/boiler_code_freeglut
+  TARGET_PDB = boiler_code_freeglut.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/Niamh.Wilson/CLionProjects/freeglut_link -B/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles/install.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build CMakeFiles/install/local.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install/local: phony CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build install/strip: phony CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/Niamh.Wilson/CLionProjects/freeglut_link/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target freeglut_static
+
+
+#############################################
+# Order-only phony target for freeglut_static
+
+build cmake_object_order_depends_target_freeglut_static: phony || lib/freeglut/CMakeFiles/freeglut_static.dir
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_callbacks.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/fg_callbacks.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_callbacks.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_cursor.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/fg_cursor.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_cursor.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_display.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/fg_display.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_display.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_ext.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/fg_ext.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_ext.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_font_data.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/fg_font_data.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_font_data.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_gamemode.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/fg_gamemode.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_gamemode.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_geometry.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/fg_geometry.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_geometry.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_gl2.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/fg_gl2.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_gl2.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_init.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/fg_init.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_init.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_input_devices.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/fg_input_devices.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_input_devices.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_joystick.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/fg_joystick.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_joystick.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_main.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/fg_main.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_main.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_misc.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/fg_misc.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_misc.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_overlay.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/fg_overlay.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_overlay.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_spaceball.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/fg_spaceball.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_spaceball.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_state.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/fg_state.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_state.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_stroke_mono_roman.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/fg_stroke_mono_roman.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_stroke_mono_roman.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_stroke_roman.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/fg_stroke_roman.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_stroke_roman.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_structure.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/fg_structure.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_structure.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_teapot.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/fg_teapot.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_teapot.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_videoresize.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/fg_videoresize.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_videoresize.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_window.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/fg_window.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_window.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_font.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/fg_font.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_font.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_menu.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/fg_menu.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_menu.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_cursor_x11.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/x11/fg_cursor_x11.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_cursor_x11.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_ext_x11.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/x11/fg_ext_x11.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_ext_x11.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_gamemode_x11.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/x11/fg_gamemode_x11.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_gamemode_x11.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_glutfont_definitions_x11.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/x11/fg_glutfont_definitions_x11.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_glutfont_definitions_x11.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_init_x11.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/x11/fg_init_x11.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_init_x11.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_input_devices_x11.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/x11/fg_input_devices_x11.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_input_devices_x11.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_joystick_x11.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/x11/fg_joystick_x11.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_joystick_x11.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_main_x11.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/x11/fg_main_x11.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_main_x11.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_menu_x11.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/x11/fg_menu_x11.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_menu_x11.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_spaceball_x11.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/x11/fg_spaceball_x11.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_spaceball_x11.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_state_x11.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/x11/fg_state_x11.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_state_x11.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_structure_x11.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/x11/fg_structure_x11.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_structure_x11.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_window_x11.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/x11/fg_window_x11.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_window_x11.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_xinput_x11.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/x11/fg_xinput_x11.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_xinput_x11.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_cmap_x11.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/x11/fg_cmap_x11.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_cmap_x11.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_display_x11_glx.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/x11/fg_display_x11_glx.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_display_x11_glx.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_state_x11_glx.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/x11/fg_state_x11_glx.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_state_x11_glx.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_window_x11_glx.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/x11/fg_window_x11_glx.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_window_x11_glx.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+build lib/freeglut/CMakeFiles/freeglut_static.dir/src/util/xparsegeometry_repl.c.o: C_COMPILER__freeglut_static_Debug /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/util/xparsegeometry_repl.c || cmake_object_order_depends_target_freeglut_static
+  DEFINES = -DHAVE_CONFIG_H
+  DEP_FILE = lib/freeglut/CMakeFiles/freeglut_static.dir/src/util/xparsegeometry_repl.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -Wno-all -Wno-pedantic
+  INCLUDES = -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/include -I/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug -I/opt/homebrew/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  OBJECT_FILE_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir/src/util
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target freeglut_static
+
+
+#############################################
+# Link the static library lib/freeglut/lib/libglut.a
+
+build lib/freeglut/lib/libglut.a: C_STATIC_LIBRARY_LINKER__freeglut_static_Debug lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_callbacks.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_cursor.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_display.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_ext.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_font_data.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_gamemode.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_geometry.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_gl2.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_init.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_input_devices.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_joystick.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_main.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_misc.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_overlay.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_spaceball.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_state.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_stroke_mono_roman.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_stroke_roman.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_structure.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_teapot.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_videoresize.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_window.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_font.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/fg_menu.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_cursor_x11.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_ext_x11.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_gamemode_x11.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_glutfont_definitions_x11.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_init_x11.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_input_devices_x11.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_joystick_x11.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_main_x11.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_menu_x11.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_spaceball_x11.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_state_x11.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_structure_x11.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_window_x11.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_xinput_x11.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_cmap_x11.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_display_x11_glx.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_state_x11_glx.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/x11/fg_window_x11_glx.c.o lib/freeglut/CMakeFiles/freeglut_static.dir/src/util/xparsegeometry_repl.c.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = lib/freeglut/CMakeFiles/freeglut_static.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = lib/freeglut/CMakeFiles/freeglut_static.dir/freeglut_static.pdb
+  TARGET_FILE = lib/freeglut/lib/libglut.a
+  TARGET_PDB = lib/freeglut/lib/libglut.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build lib/freeglut/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/lib/freeglut && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build lib/freeglut/edit_cache: phony lib/freeglut/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build lib/freeglut/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/lib/freeglut && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/Niamh.Wilson/CLionProjects/freeglut_link -B/Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build lib/freeglut/rebuild_cache: phony lib/freeglut/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build lib/freeglut/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build lib/freeglut/CMakeFiles/install.util: CUSTOM_COMMAND lib/freeglut/all
+  COMMAND = cd /Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/lib/freeglut && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build lib/freeglut/install: phony lib/freeglut/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build lib/freeglut/CMakeFiles/install/local.util: CUSTOM_COMMAND lib/freeglut/all
+  COMMAND = cd /Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/lib/freeglut && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build lib/freeglut/install/local: phony lib/freeglut/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build lib/freeglut/CMakeFiles/install/strip.util: CUSTOM_COMMAND lib/freeglut/all
+  COMMAND = cd /Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/lib/freeglut && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build lib/freeglut/install/strip: phony lib/freeglut/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Target aliases.
+
+build boiler_code_freeglut: phony boiler_code_freeglut.app/Contents/MacOS/boiler_code_freeglut
+
+build freeglut_static: phony lib/freeglut/lib/libglut.a
+
+build libglut.a: phony lib/freeglut/lib/libglut.a
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug
+
+build all: phony boiler_code_freeglut.app/Contents/MacOS/boiler_code_freeglut lib/freeglut/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/Niamh.Wilson/CLionProjects/freeglut_link/cmake-build-debug/lib/freeglut
+
+build lib/freeglut/all: phony lib/freeglut/lib/libglut.a
+
+# =============================================================================
+# Unknown Build Time Dependencies.
+# Tell Ninja that they may appear as side effects of build rules
+# otherwise ordered by order-only dependencies.
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCCompilerABI.c /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCompilerIdDetection.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeConfigurableFile.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompileFeatures.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompilerABI.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompilerId.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeFindBinUtils.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeParseImplicitIncludeInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeParseImplicitLinkInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeParseLibraryArchitecture.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystem.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeTestCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeTestCompilerCommon.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckCCompilerFlag.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckFunctionExists.c /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckFunctionExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckIncludeFileCXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckIncludeFiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckTypeSize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/ADSP-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Borland-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Cray-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GHS-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/HP-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IAR-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Intel-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/LCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/MSVC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/PGI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/PathScale-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/SCO-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/TI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Watcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/XL-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindFontconfig.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindFreetype.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindOpenGL.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPkgConfig.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindX11.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/GNUInstallDirs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Internal/CheckCompilerFlag.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Internal/CheckFlagCommonConfig.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Internal/FeatureTesting.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/MacOSXBundleInfo.plist.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/SelectLibraryConfigurations.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake /Users/Niamh.Wilson/CLionProjects/freeglut_link/CMakeLists.txt /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/CMakeLists.txt /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/FreeGLUTConfig.cmake.in /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/config.h.in /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/freeglut.pc.in /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/fg_version.h.in CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake CMakeFiles/CheckIncludeFiles/HAVE_FCNTL_H.c CMakeFiles/CheckIncludeFiles/HAVE_INTTYPES_H.c CMakeFiles/CheckIncludeFiles/HAVE_STDBOOL_H.c CMakeFiles/CheckIncludeFiles/HAVE_STDINT_H.c CMakeFiles/CheckIncludeFiles/HAVE_SYS_IOCTL_H.c CMakeFiles/CheckIncludeFiles/HAVE_SYS_PARAM_H.c CMakeFiles/CheckIncludeFiles/HAVE_SYS_TIME_H.c CMakeFiles/CheckIncludeFiles/HAVE_SYS_TYPES_H.c CMakeFiles/CheckIncludeFiles/HAVE_UNISTD_H.c CMakeFiles/CheckIncludeFiles/HAVE_USBHID_H.c CMakeFiles/CheckIncludeFiles/HAVE_X11_EXTENSIONS_XINPUT2_H.c
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCCompilerABI.c /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCompilerIdDetection.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeConfigurableFile.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompileFeatures.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompilerABI.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompilerId.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeFindBinUtils.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeParseImplicitIncludeInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeParseImplicitLinkInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeParseLibraryArchitecture.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystem.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeTestCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeTestCompilerCommon.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckCCompilerFlag.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckFunctionExists.c /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckFunctionExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckIncludeFileCXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckIncludeFiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckTypeSize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/ADSP-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Borland-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Cray-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GHS-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/HP-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IAR-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Intel-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/LCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/MSVC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/PGI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/PathScale-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/SCO-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/TI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Watcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/XL-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindFontconfig.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindFreetype.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindOpenGL.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPkgConfig.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindX11.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/GNUInstallDirs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Internal/CheckCompilerFlag.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Internal/CheckFlagCommonConfig.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Internal/FeatureTesting.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/MacOSXBundleInfo.plist.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/SelectLibraryConfigurations.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake /Users/Niamh.Wilson/CLionProjects/freeglut_link/CMakeLists.txt /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/CMakeLists.txt /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/FreeGLUTConfig.cmake.in /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/config.h.in /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/freeglut.pc.in /Users/Niamh.Wilson/CLionProjects/freeglut_link/lib/freeglut/src/fg_version.h.in CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake CMakeFiles/CheckIncludeFiles/HAVE_FCNTL_H.c CMakeFiles/CheckIncludeFiles/HAVE_INTTYPES_H.c CMakeFiles/CheckIncludeFiles/HAVE_STDBOOL_H.c CMakeFiles/CheckIncludeFiles/HAVE_STDINT_H.c CMakeFiles/CheckIncludeFiles/HAVE_SYS_IOCTL_H.c CMakeFiles/CheckIncludeFiles/HAVE_SYS_PARAM_H.c CMakeFiles/CheckIncludeFiles/HAVE_SYS_TIME_H.c CMakeFiles/CheckIncludeFiles/HAVE_SYS_TYPES_H.c CMakeFiles/CheckIncludeFiles/HAVE_UNISTD_H.c CMakeFiles/CheckIncludeFiles/HAVE_USBHID_H.c CMakeFiles/CheckIncludeFiles/HAVE_X11_EXTENSIONS_XINPUT2_H.c: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all
